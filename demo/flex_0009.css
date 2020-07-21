@@ -1,0 +1,7 @@
+/* 
+  file: flex_0009.css
+  flex-direction: column-reverse; 时的页面布局效果。
+*/
+.demo {
+  flex-direction: column-reverse;
+}

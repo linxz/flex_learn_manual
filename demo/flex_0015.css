@@ -1,0 +1,13 @@
+/* 
+  file: flex_0015.css
+  justify-content: center; 在 flex-direction 的值为 column 情况下的表现效果
+*/
+.demo {
+  justify-content: center;
+  /* 为了便于更好地看清 flex 元素的改变，加个边框来增强效果 */
+  border: 1px solid #000;
+  /* 改变 flex-direction 的值 */
+  flex-direction: column;
+  /* 为了更好地查看根据主轴方向的对齐，增加一个高度值 */
+  height: 600px;
+}

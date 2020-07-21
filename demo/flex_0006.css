@@ -1,0 +1,7 @@
+/* 
+  file: flex_0006.css
+  flex-direction: row-reverse 时 flex 元素的排列效果
+*/
+.demo {
+  flex-direction: row-reverse;
+}

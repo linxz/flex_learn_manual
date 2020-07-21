@@ -1,0 +1,13 @@
+/* 
+  file: flex_0003.css
+  未激活伪元素之前的多行 flex 弹性布局
+*/
+.demo {
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #d8d8d8;
+  border: 1px dashed #000;
+}
+.item {
+  flex: 1 1 20%;
+}

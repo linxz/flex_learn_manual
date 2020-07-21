@@ -1,0 +1,15 @@
+/* 
+  file: flex_0002.css
+  改变 .demo 的 display 属性值为 inline-flex
+*/
+.demo {
+  display: inline-flex;
+  height: 200px;
+  padding: 10px;
+  background-color: #d8d8d8;
+  border: 1px dashed #000;
+}
+.demo + .demo {
+  height: 100px;
+  vertical-align: middle;
+}

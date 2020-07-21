@@ -1,0 +1,16 @@
+/* 
+  file: flex_0017.css
+  justify-content: space-between; 的对齐效果
+*/
+.demo {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}

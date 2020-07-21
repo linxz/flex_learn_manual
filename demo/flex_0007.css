@@ -1,0 +1,8 @@
+/* 
+  file: flex_0007.css
+  修改 direction 的值，改变阅读顺序
+*/
+.demo {
+  flex-direction: row;
+  direction: rtl;
+}

@@ -1,0 +1,20 @@
+/* 
+  file: flex_0004.css
+  添加伪元素之后的多行 flex 弹性布局
+*/
+.demo {
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #d8d8d8;
+  border: 1px dashed #000;
+}
+.item {
+  flex: 1 1 20%;
+}
+.demo::before,
+.demo::after {
+  content: '伪元素';
+  width: 44px;
+  height: 44px;
+  background-color: #cf197d;
+}

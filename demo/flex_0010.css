@@ -1,0 +1,8 @@
+/* 
+  file: flex_0010.css
+  flex-direction: column; 时，添加 direction: rtl; 的页面效果。
+*/
+.demo {
+  flex-direction: column;
+  direction: rtl;
+}

@@ -1,0 +1,7 @@
+/* 
+  file: flex_0011.css
+  flex-wrap: wrap; 的页面效果；
+*/
+.demo {
+  flex-wrap: wrap;
+}

@@ -251,10 +251,10 @@
 */
 .demo {
   height: 200px;
+  /* 相对于 flex_0020 demo，增加一个 height 值 */
   flex-direction: column;
   /* 改变 flex-direction 的值为 column */
   justify-content: space-evenly;
-  /* 相对 flex_0018 demo，仅仅只是修改了 justify-content 的属性值  */
   flex-wrap: wrap;
   border: 1px solid #000;
 }

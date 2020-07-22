@@ -1,13 +1,12 @@
 /* 
-  file: flex_0020.css
-  justify-content 在改变“主轴”后的变化
+  file: flex_0022.css
+  当 flex-direction 为默认的 row 时，flex 容器高度较大的页面效果；
 */
 .demo {
-  flex-direction: column;
-  /* 改变 flex-direction 的值为 column */
   justify-content: space-evenly;
-  /* 相对于 flex_0019 demo，改变了 flex-direction 的值 */
   flex-wrap: wrap;
+  height: 400px;
+  /* 在这里给 flex 容器设置了高度 */
   border: 1px solid #000;
 }
 .item {

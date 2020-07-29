@@ -82,7 +82,110 @@
 
 ### flex-start
 
-`flex-start` 从 **flex** 和 **start** 这两个单词来看就很容易理解了，
+`flex-start` 从 **flex** 和 **start** 这两个单词来看就很容易理解了，首先 `align-items` 是控制 flex 元素在交叉轴方向的对齐排列方式，其次这个 start 表明了是从起始线开始的位置对齐。结合这两个条件，那么在我们默认的情况下 flex 元素是在 flex 容器的左上角。
+
+```css
+/* 
+  file: flex_0024.css
+  align-items: flex-start; 在默认情况下的页面表现效果；
+*/
+.demo {
+  align-items: flex-start;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+```
+
+<img src="image/02-06-05.png" style="zoom:50%;" />
+
+按照前面的 demo 情况，这里我们可以考虑给每个 flex 元素增加宽度，以形成区别。
+
+```css
+/* 
+  file: flex_0025.css
+  在 flex 元素增加宽度之后的 align-items: flex-start; 对齐展示效果；
+*/
+.demo {
+  align-items: flex-start;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}
+```
+
+<img src="image/02-06-06.png" style="zoom:50%;" />
+
+好像除了第六个 flex 元素的宽度变了，其他的感觉上并没有太大的变化。这个主要是因为 flex 是弹性布局，我们在没有具体控制每个 flex 元素的弹性特性时，现在所看到的宽度也并非是真实的宽度。而且，在 flex 弹性布局中，如果 `flex-direction` 是默认值 `row` 的话，是会一行排列下去的，因此，我们就需要考虑增加一个 `flex-wrap` 属性来让其换行展示。
+
+```css
+/* 
+  file: flex_0026.css
+  在 flex 元素增加宽度之后的 align-items: flex-start; 对齐展示效果；
+  让 flex 元素具有换行特性；
+*/
+.demo {
+  flex-wrap: wrap;
+......
+```
+
+<img src="image/02-06-07.png" style="zoom:50%;" />
+
+现在这样，如果一行放不下，就换行展示，最终的 flex 元素的宽度也是正确的了。这里需要注意，目前 flex 容器是有 `height` 值，浏览器会根据具体的高度值，将 flex 元素等分排列。
+
+#### flex 容器大于 flex 元素的高度总和时
+
+就如上图所示，在未使用 `stretch` 时，会产生相近值的间距。
+
+#### flex 容器小于 flex 元素的高度总和时
+
+在未设置任何与 `overflow` 相关的属性时，这种情况下，我们可以看到 flex 元素就是超出 flex 容器的。而如果我们在这种情况下对 flex 容器增加 `overflow` 属性，那么就可以实现截断或者滚动的效果。
+
+<img src="image/02-06-08.png" style="zoom:50%;" />
+
+### flex-end
+
+在了解了 `flex-start` 之后，那么对于 `flex-end` 就简单易懂了，**start** 是在起始线的位置开始对齐，那么 **end** 就是终止线的位置开始对齐了。
+
+```css
+/* 
+  file: flex_0027.css
+  基于 26号 demo 的情况改变 align-items 值为 flex-end 后的页面效果
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: flex-end;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  /* width: 60px; */
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  /* width: 200px; */
+}
+```
+
+这里暂时先把 `width` 部分注释，我们看一下 `align-items: flex-end;` 的页面效果。
+
+<img src="image/02-06-09.png" style="zoom:50%;" />
+
+接着我们可以把 `width` 的注释去掉，可以看到效果其实就是从下往上排列，间距是在上方的 flex 元素对齐方式。
+
+<img src="image/02-06-10.png" style="zoom:50%;" />
+
+### cener
+
+
 
 
 

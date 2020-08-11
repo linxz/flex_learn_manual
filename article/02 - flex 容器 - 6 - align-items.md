@@ -1,5 +1,3 @@
-
-
 在前面有关 `justify-content` 的时候，我们提到了给 flex 容器设置一个高度，让以 `column` 方向排列的元素在特定高度内出现“换行”的现象。那么我们再往这个 demo 之前看看，如果我们是以 `row` 方向排列的话，并且设置了一个高度，flex 元素在容器中会是怎么样的一个表现形式呢？
 
 ```css
@@ -179,11 +177,110 @@
 
 <img src="image/02-06-09.png" style="zoom:50%;" />
 
-接着我们可以把 `width` 的注释去掉，可以看到效果其实就是从下往上排列，间距是在上方的 flex 元素对齐方式。
+接着我们可以把 `width` 的注释去掉，可以看到效果其实就是从下往上排列，间距是在上方的 flex 元素对齐方式。从感官上可以感受到，是以底部为对齐方式，通过间距将元素均分了。
 
 <img src="image/02-06-10.png" style="zoom:50%;" />
 
-### cener
+而如果其中有一个 flex 元素的高度有差异，比如我们将第五个 flex 元素的 `height` 设置为 `80px` 的话，将会看到这样的一个布局排列情况。
+
+<img src="image/02-06-11.png" style="zoom:50%;" />
+
+这时我们可以看到，第二行的几个元素对齐方式是不是有点不一样了呢？6 和 7 都是相对于 5 的底部对齐的。看到这个，回想一下 `flex-start`，如果我们将 `align-items` 的值换成 `flex-start` 后会是怎么样的呢？
+
+```css
+/* 
+  file: flex_0028.css
+  align-items: flex-start; 时并且第五个 item 高度改变的情况
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}
+/* 改变第 5 个 flex 元素的高度 */
+.item_5 {
+  height: 60px;
+}
+```
+
+按照 `flex-end` 的表现来看，那么这个时候我们能够看到的效果，应该是 6 和 7 会相对于 5 的顶部来对齐，并且整体的 flex 元素是从 flex 容器顶部开始排列下来的。
+
+<img src="image/02-06-12.png" style="zoom:50%;" />
+
+### center
+
+基于对 `flex-start` 和 `flex-end` 的理解，对于理解 `center` 就简单多了。**上中下**、**左中右**，无论我们的如果设置 `flex-direction` 的值，对于 `align-items: center;` 而言，对齐的方式就是中间。我们就对上个 demo 做一个简单调整：
+
+```css
+/* 
+  file: flex_0029.css
+  基于 demo_0028 修改 align-items: center; 后的效果
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: center;
+......
+```
+
+当 `align-items` 的值为 `center`，我们可以看到 flex 元素的排列方式就是以居中的方式对齐了。
+
+<img src="image/02-06-13.png" style="zoom:50%;" />
+
+无论是 6 和 7 相对于 5 的对齐方式，还是每个 flex 元素相对于 flex 容器的对齐方式。那么这个时候我们再将每个元素的宽高全部去掉之后，按照之前的 demo 情况来看，应该会看到所有的 flex 元素居中显示。
+
+```css
+/* 
+  file: flex_0030.css
+  flex 元素没有宽高时的 align-items: center; 的对齐方式
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: center;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+```
+
+<img src="image/02-06-14.png" style="zoom:50%;" />
+
+对于已经掌握了 `align-items` 对齐方式的你，这个也就没有任何难度可言，理解起来应该就是那么的简单，那么的容易了。这个时候不知道你是否会想起上个章节中我们学过的 `justify-content` 属性呢？如果这个时候我们再来一个 `justify-content: center;` 之后会是怎么样呢？不妨试试？
+
+前面我们提到，**上中下**、**左中右** ，对于 `align-items: center;` 对齐的结果都是中间，如下调整了之后，flex 元素排列方式改变，但还是在中间。
+
+```css
+/* 
+  file: flex_0031.css
+  改变 flex-direction 后的 align-items: center; 的对齐方式
+*/
+.demo {
+  /* flex-wrap: wrap; */
+  align-items: center;
+  flex-direction: column;
+  /* height: 200px; */
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+```
+
+<img src="image/02-06-15.png" style="zoom:50%;" />
+
+**改变 `flex-direction` 的时候，也将代表改变了主轴与交叉轴交换了位置，但无法改变 `justify-content` 和 `align-items` 分别是相对主轴和交叉轴进行对齐的原则。**万变不离其宗，无论怎么变，我们只要知道了主轴和交叉轴的位置，就能较好地掌握 flex 糖心布局了。
+
+### baseline
+
+
+
+
 
 
 

@@ -278,11 +278,68 @@
 
 ### baseline
 
+在 CSS 的对齐范畴中，不仅仅只有**上中下**几个位置的对齐，还有相对于文本的特性做对齐方式的，比如我们使用 `line-height` 做单行垂直居中，比如使用 `veritcal-align` 做文本垂直对齐方式。这些基本上都是与文本的某些特性有关，比如“基线”。
 
+这个延伸来说明的话，又将会是一篇长文，这里就不扩展了。在 `align-items` 中，我们只要知道，还有一个属性值是 `baseline`，用这个属性值我们可以将 flex 元素以文本的基线为基准做对齐。
 
+```css
+/* 
+  file: flex_0032.css
+  align-items: baseline; 的对齐方式
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: baseline;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}
+/* 改变第 5 个 flex 元素的高度 */
+.item_5 {
+  height: 60px;
+}
+```
 
+在这个 demo 中，保持之前的一些属性，修改 `.demo` 中的 `align-items` 属性值为 `baseline`，那么我们可以看到目前的页面效果与 `flex-start` 没什么差别，对吧。
 
+<img src="image/02-06-16.png" style="zoom:50%;" />
 
+或许这也就是 CSS 的魅力所在，看似相同的效果，但往往隐藏着在特定情况下才会被触发的情况。比如我们现在对 `.item_6` 做一些调整。
 
+```css
+.item_6 {
+  width: 200px;
+  color: #fff;
+  /* 将字体大小放大 */
+  font-size: 50px;
+}
+```
 
+<img src="image/02-06-17.png" style="zoom:50%;" />
 
+可以看到 `.item_6` 这个元素旁边的的 flex 元素对齐时，无论 `.item_6` 中的字体大小如何变化，对齐的位置是不会改变的。我们来粗浅地了解一下这个所谓的“基线”。
+
+<img src="image/02-06-18.png" style="zoom:50%;" />
+
+我们在原有的效果图上，增加一条直线，可以看到 5、6、7 这三个数字底部近乎是在一条线上的。对于基线而言，不同的字体在设计之初所设定的极限值不同，最终也将会影响这个对齐的效果。比如我们对全局使用了 `font-family: Georgia;`  并且调整了文字大小 `font-size: 20px;` 之后，会发现如下图的效果，数字 6 不再与 5、7 保持同一条线上了。
+
+<img src="image/02-06-19.png" style="zoom:50%;" />
+
+这只是感官上偏移了，但实际上还是以“基线”的方式在对齐元素。在 flex 弹性布局中，`baseline` 的对齐效果，不在乎 flex 元素的文字内容多少，而是在乎于文字大小所影响的基线值。如下图，假设我们把 5、6 的文字内容修改后，会发现 `baseline` 的对齐方式与第一行最大的文字是有关联的。
+
+<img src="image/02-06-20.png" style="zoom:50%;" />
+
+### 小结
+
+`align-items` 以交叉轴为对齐方向，根据不同的属性值表现出不同的对齐方式。
+
+* `stretch` 拉伸的效果与 flex 容器和 flex 元素的 size 有关；
+* `flex-start` 、`flex-end` 以及 `center` 是最基本的三个方向的对齐方式；
+* `baseline` 将会受到 flex 元素中字体以及字体大小的关系，从而影响对齐效果；

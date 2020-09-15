@@ -107,5 +107,88 @@
 
 ### space-between
 
+flex 容器内的 flex 元素行之间距离保持相等，第一行与最后一行紧贴 flex 容器“交叉轴”的起点位置与结束位置。
 
+```css
+/* 
+  file: flex_0038.css
+  align-content: space-between; 的效果
+*/
+.demo {
+  flex-wrap: wrap;
+  align-content: space-between;
+......
+```
+
+<img src="image/02-07-05.png" style="zoom:50%;" />
+
+为了能够更好地体现 flex 元素行之间的距离是保持相等，我们可以尝试给不同的 item 添加宽度，使其换行，增加行数，看看多行的情况是怎么样的。
+
+<img src="image/02-07-06.png" style="zoom:50%;" />
+
+由三行变成四行后，我们可以看到，相邻行之间的间距是相等的。在该 demo 中，外层的 flex 容器高度是固定的，可以通过外边框的黑线可以看到。那么，如果这个时候有一个元素的宽度也增大了，变成了五行，情况会怎么样呢？
+
+<img src="image/02-07-07.png" style="zoom:50%;" />
+
+在整个 flex 容器中已经无法再正常容纳了，那么相邻行之间就更不可能会有间隔的空间存在。
+
+### space-around
+
+相对于 `space-between` 而言，差别是在 flex 容器内的第一行元素与最后一行元素距离边缘的距离是相邻行之间间距的一半。
+
+```css
+/* 
+  file: flex_0039.css
+  align-content: space-around; 的效果
+*/
+.demo {
+  flex-wrap: wrap;
+  align-content: space-around;
+......
+```
+
+<img src="image/02-07-08.png" style="zoom:50%;" />
+
+### space-evenly
+
+相对于  `space-around` 而言，`space-evenly` 的差别是第一行与最后一行相距边缘的距离是与相邻行之间相同的。或者我们可以理解为，flex 元素的行与行之间距离均分了。
+
+```css
+/* 
+  file: flex_0040.css
+  align-content: space-evenly; 的效果
+*/
+.demo {
+  flex-wrap: wrap;
+  align-content: space-evenly;
+......
+```
+
+<img src="image/02-07-09.png" style="zoom:50%;" />
+
+> 思考：在 `space-between` 中我们尝试让 flex 元素变成多行后，看看每行之间的距离变化，那么在 `space-around` 和 `space-evenly` 这两个属性值中，用同样的方式改变每行之间的距离，会有什么效果呢？
+
+### stretch
+
+拉伸每个 flex 元素，将 flex 容器中剩余的空间平均分配给每行的 flex 元素，使其最终撑满整个 flex 容器。
+
+```css
+/* 
+  file: flex_0041.css
+  align-content: stretch; 的效果
+*/
+.demo {
+  flex-wrap: wrap;
+  align-content: stretch;
+......
+```
+
+<img src="image/02-07-10.png" style="zoom:50%;" />
+
+## 小结
+
+* `align-content` 的对齐方式主要是以“交叉抽”为基准，在 flex 容器中对齐排列 flex 元素。每个属性值都会有不同的效果，并且还会受到 flex 容器的大小影响每行 flex 元素的展示方式。
+* 同时需要注意的是，`align-content` 对于使用了 `flex-wrap: nowrap;` 的 flex 布局是无效的。
+* 如果在一个 flex 容器仅有一个 flex 元素的话，可以结合 `align-cotent` 和 `justify-content` 实现一个水平垂直居中的效果。
+* `align-content` 是相对于“交叉轴”的，而 `justify-content` 是相对于“主轴”的。
 

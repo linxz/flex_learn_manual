@@ -1,0 +1,22 @@
+/* 
+  file: flex_0037.css
+  基于 align-content: center; 的效果改变 item_3 的高度值
+*/
+.demo {
+  flex-wrap: wrap;
+  align-content: center;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}
+/* 改变第 3 个元素的高度，查看布局效果 */
+.item_3 {
+  height: 50px;
+}

@@ -1,0 +1,17 @@
+/* 
+  file: flex_0043.css
+  改变其中两个 item 的 flex-grow 值后的情况；
+*/
+.demo {
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  flex-grow: 1;
+}
+.item_1 {
+  flex-grow: 4;
+}
+.item_2 {
+  flex-grow: 2;
+}

@@ -1,0 +1,11 @@
+/* 
+  file: flex_0045.css
+  flex-shrink 默认值的情况下，增加其中一个元素宽度的效果；
+*/
+.demo {
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item_5 {
+  min-width: 100px;
+}

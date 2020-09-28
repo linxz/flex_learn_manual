@@ -1,0 +1,19 @@
+/* 
+  file: flex_0046.css
+  flex-shrink 不同比例值的页面效果；
+*/
+.demo {
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  flex-shrink: 0.5;
+  /* 鉴于 flex-shrink 的缩小特性，设定一个 width 值观察看效果 */
+  width: 50px;
+}
+.item_5 {
+  flex-shrink: 2;
+}
+.item_6 {
+  flex-shrink: 1;
+}

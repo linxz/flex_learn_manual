@@ -52,3 +52,47 @@
 
 ### 设定比例值的 flex-shrink
 
+在前面我们使用的是 `flex-shrink` 的默认值 `1`，那么如果我们设定不同的比例值，会是怎么样的一个结果呢。
+
+```css
+/* 
+  file: flex_0046.css
+  flex-shrink 不同比例值的页面效果；
+*/
+.demo {
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  flex-shrink: 0.5;
+  /* 鉴于 flex-shrink 的缩小特性，设定一个 width 值观察看效果 */
+  width: 50px;
+}
+.item_5 {
+  flex-shrink: 2;
+}
+.item_6 {
+  flex-shrink: 1;
+}
+```
+
+首先我们对每个 **item** 的 `flex-shrink` 设置为 `0.5` ，为了与 **item_6** 形成差异，其次也是比较关键的是，我们现在所做的 demo 效果仅仅只是一个 `flex-shrink`，是很难看到效果的，因此添加一个 `width` 来做差异化对比。
+
+<img src="image/02-10-15.png" style="zoom:50%;" />
+
+当 flex 容器的宽度足够大，那么每个 flex 元素就不需要被压缩，并且我们也没有设置拉伸，所以，现在看到的效果是每个 flex 元素大家一致，且是 50px 的宽 + 2 个 10px 的 `padding` 内间距，也就是 70px 的大小。
+
+可如果我们将浏览器的宽度缩小，逐渐逐渐缩小的时候，会发现 flex 元素会先从 `.item_5` 这个开始缩，接着是 `.item_6`，最后才是剩余所有元素被压缩到最小可容纳元素内容的尺寸。
+
+<img src="image/02-10-16.png" style="zoom:50%;" />
+
+<img src="image/02-10-17.png" style="zoom:50%;" />
+
+
+
+## 小结
+
+从 flex 元素的表现情况来分析，`flex-shrink` 的作用仅仅只是用来控制当 flex 容器的空间被缩小时按照特定比例关系先后缩小至可容纳元素内容的最小宽度。在 demo 中，我们发现 `min-width` 与 `width` 是会对 `flex-shrink` 的结果产生影响的。
+
+那么我们设想一下，如果 `flex-shrink: 0; width: 50px;` 这样的一个 **item** 属性值，会有什么结果呢？
+

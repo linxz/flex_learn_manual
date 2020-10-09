@@ -1,4 +1,4 @@
-在前面我们了解到的 `flex-grow` 是在所有的 flex 元素宽度总和小于 flex 容器的宽度之后，按照特定的比率去分配空间给具有 `flex-grow` 值的 flex 元素。而现在我们要提到的则是与之相反的一个属性——`flex-shrink`，当 flex 元素之和大于 flex 容器的宽度时，具有 `flex-shrink` 属性的 flex 元素会根据特定的比率缩小其自身的宽度。
+在前面我们了解到的 `flex-grow` 是在所有的 flex 元素宽度总和小于 flex 容器的宽度之后，按照特定的比率去分配空间给具有 `flex-grow` 值的 flex 元素。而现在我们要提到的则是与之相反的一个属性，`flex-shrink`，当 flex 元素之和大于 flex 容器的宽度时，具有 `flex-shrink` 属性的 flex 元素会根据特定的比率缩小其自身的宽度。
 
 与 `flex-grow` 相同，`flex-shrink` 的单位也只是数字而已，可以是小数点的数字，但不能是负数，默认值是 `1`。与 `flex-grow` 相同，都是以“主轴”的方向为基准。
 

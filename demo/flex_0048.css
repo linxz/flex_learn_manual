@@ -1,0 +1,37 @@
+/* 
+  file: flex_0048.css
+  flex 仅有一个属性值时的情况，主要是为了观察在 DevTools 中解析 flex 后每个值的变化；
+*/
+.demo {
+  flex-wrap: wrap;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+/* 仅为了观察 flex 属性值的变化，隐藏部分不需要的元素 */
+.item:nth-child(n+9) {
+  display: none;
+}
+.item_1 {
+  flex: 3;
+}
+.item_2 {
+  flex: 1;
+}
+.item_3 {
+  flex: 0;
+}
+.item_4 {
+  flex: 0%;
+}
+.item_5 {
+  flex: 200px;
+}
+.item_6 {
+  flex: auto;
+}
+.item_7 {
+  flex: none;
+}
+.item_8 {
+  flex: initial;
+}

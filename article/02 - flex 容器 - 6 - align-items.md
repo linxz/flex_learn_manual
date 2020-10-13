@@ -1,7 +1,7 @@
 在前面有关 `justify-content` 的时候，我们提到了给 flex 容器设置一个高度，让以 `column` 方向排列的元素在特定高度内出现“换行”的现象。那么我们再往这个 demo 之前看看，如果我们是以 `row` 方向排列的话，并且设置了一个高度，flex 元素在容器中会是怎么样的一个表现形式呢？
 
 ```css
-/* 
+/*
   file: flex_0022.css
   当 flex-direction 为默认的 row 时，flex 容器高度较大的页面效果；
 */
@@ -53,7 +53,7 @@
 通过 devTools 我们可以看到 flex 元素的宽度其实是 `padding` 和 `width`  的总和，`80px`。所以，我们还是需要把每个 flex 元素的 `width` 删掉才能得到最终想要的效果。
 
 ```css
-/* 
+/*
   file: flex_0023.css
 	当 flex-direction 为 column 时，默认的 align-items 的表现结果；
 */
@@ -83,7 +83,7 @@
 `flex-start` 从 **flex** 和 **start** 这两个单词来看就很容易理解了，首先 `align-items` 是控制 flex 元素在交叉轴方向的对齐排列方式，其次这个 start 表明了是从起始线开始的位置对齐。结合这两个条件，那么在我们默认的情况下 flex 元素是在 flex 容器的左上角。
 
 ```css
-/* 
+/*
   file: flex_0024.css
   align-items: flex-start; 在默认情况下的页面表现效果；
 */
@@ -100,7 +100,7 @@
 按照前面的 demo 情况，这里我们可以考虑给每个 flex 元素增加宽度，以形成区别。
 
 ```css
-/* 
+/*
   file: flex_0025.css
   在 flex 元素增加宽度之后的 align-items: flex-start; 对齐展示效果；
 */
@@ -124,7 +124,7 @@
 好像除了第六个 flex 元素的宽度变了，其他的感觉上并没有太大的变化。这个主要是因为 flex 是弹性布局，我们在没有具体控制每个 flex 元素的弹性特性时，现在所看到的宽度也并非是真实的宽度。而且，在 flex 弹性布局中，如果 `flex-direction` 是默认值 `row` 的话，是会一行排列下去的，因此，我们就需要考虑增加一个 `flex-wrap` 属性来让其换行展示。
 
 ```css
-/* 
+/*
   file: flex_0026.css
   在 flex 元素增加宽度之后的 align-items: flex-start; 对齐展示效果；
   让 flex 元素具有换行特性；
@@ -153,7 +153,7 @@
 在了解了 `flex-start` 之后，那么对于 `flex-end` 就简单易懂了，**start** 是在起始线的位置开始对齐，那么 **end** 就是终止线的位置开始对齐了。
 
 ```css
-/* 
+/*
   file: flex_0027.css
   基于 26号 demo 的情况改变 align-items 值为 flex-end 后的页面效果
 */
@@ -188,7 +188,7 @@
 这时我们可以看到，第二行的几个元素对齐方式是不是有点不一样了呢？6 和 7 都是相对于 5 的底部对齐的。看到这个，回想一下 `flex-start`，如果我们将 `align-items` 的值换成 `flex-start` 后会是怎么样的呢？
 
 ```css
-/* 
+/*
   file: flex_0028.css
   align-items: flex-start; 时并且第五个 item 高度改变的情况
 */
@@ -221,7 +221,7 @@
 基于对 `flex-start` 和 `flex-end` 的理解，对于理解 `center` 就简单多了。**上中下**、**左中右**，无论我们的如果设置 `flex-direction` 的值，对于 `align-items: center;` 而言，对齐的方式就是中间。我们就对上个 demo 做一个简单调整：
 
 ```css
-/* 
+/*
   file: flex_0029.css
   基于 demo_0028 修改 align-items: center; 后的效果
 */
@@ -238,7 +238,7 @@
 无论是 6 和 7 相对于 5 的对齐方式，还是每个 flex 元素相对于 flex 容器的对齐方式。那么这个时候我们再将每个元素的宽高全部去掉之后，按照之前的 demo 情况来看，应该会看到所有的 flex 元素居中显示。
 
 ```css
-/* 
+/*
   file: flex_0030.css
   flex 元素没有宽高时的 align-items: center; 的对齐方式
 */
@@ -258,7 +258,7 @@
 前面我们提到，**上中下**、**左中右** ，对于 `align-items: center;` 对齐的结果都是中间，如下调整了之后，flex 元素排列方式改变，但还是在中间。
 
 ```css
-/* 
+/*
   file: flex_0031.css
   改变 flex-direction 后的 align-items: center; 的对齐方式
 */
@@ -274,7 +274,7 @@
 
 <img src="image/02-06-15.png" style="zoom:50%;" />
 
-**改变 `flex-direction` 的时候，也将代表改变了主轴与交叉轴交换了位置，但无法改变 `justify-content` 和 `align-items` 分别是相对主轴和交叉轴进行对齐的原则。**万变不离其宗，无论怎么变，我们只要知道了主轴和交叉轴的位置，就能较好地掌握 flex 糖心布局了。
+**改变 `flex-direction` 的时候，也将代表改变了主轴与交叉轴交换了位置，但无法改变 `justify-content` 和 `align-items` 分别是相对主轴和交叉轴进行对齐的原则。**万变不离其宗，无论怎么变，我们只要知道了主轴和交叉轴的位置，就能较好地掌握 flex 弹性布局了。
 
 ### baseline
 
@@ -283,7 +283,7 @@
 这个延伸来说明的话，又将会是一篇长文，这里就不扩展了。在 `align-items` 中，我们只要知道，还有一个属性值是 `baseline`，用这个属性值我们可以将 flex 元素以文本的基线为基准做对齐。
 
 ```css
-/* 
+/*
   file: flex_0032.css
   align-items: baseline; 的对齐方式
 */

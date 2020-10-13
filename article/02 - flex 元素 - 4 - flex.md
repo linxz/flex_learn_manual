@@ -143,9 +143,12 @@
 
 当 `flex` 属性有两个属性值的时候，虽然不区分前后顺序，但是需要注意有且只能有一个属性值是有单位值，或者关键词。以下三种情况会被情况会被浏览器视为无效属性值：
 
-* 含有 **initial** 属性值时，如：`flex: initial 200px;` 
+* 含有 **initial** 属性值时，如：`flex: initial 200px;`
+   <img src="image/02-10-35.png" style="zoom:50%;" />
 * 含有 **none** 属性值时，如：`flex: 7 none;`
+  <img src="image/02-10-36.png" style="zoom:50%;" />
 * 两个属性值都有单位值时，如：`flex: 200px 0%;`
+  <img src="image/02-10-37.png" style="zoom:50%;" />
 
 ```css
 /* 
@@ -156,10 +159,6 @@
   flex-wrap: wrap;
   /* 在这里给 flex 容器设置了高度 */
   border: 1px solid #000;
-}
-/* 仅为了观察 flex 属性值的变化，隐藏部分不需要的元素 */
-.item:nth-child(n+9) {
-  display: none;
 }
 .item_1 {
   flex: 3 200px;
@@ -176,16 +175,23 @@
 .item_5 {
   flex: 5 auto;
 }
-/* 以下情况会被浏览器视为无效属性值 */
 .item_6 {
+  flex: auto 6;
+}
+/* 以下情况会被浏览器视为无效属性值 */
+.item_7 {
+  /* 如其中一个为 auto，另外一个必定是无单位的值，否则将会报错 */
+  flex: 200px auto;
+}
+.item_8 {
   /* 当含有 initial 的时候，也不可以其他属性值存在 */
   flex: initial 200px;
 }
-.item_7 {
+.item_9 {
   /* 当含有 none 的时候，也不可以其他属性值存在 */
   flex: 7 none;
 }
-.item_8 {
+.item_0 {
   /* 当出现有两个具有单位值的属性值时 */
   flex: 200px 0%;
 }
@@ -193,7 +199,37 @@
 
 如上述的 demo 中，**item_1** 到 **item_5** 都是可被正常解析的属性值，从中我们可以看到有一个单位值的或者存在 `auto` 的都是可以被正常解析，因为是作用于 `flex-basis` 属性的。那么没有单位值的数字是作用于 `flex-grow` 呢还是 `flex-shrink` 呢？
 
+结合单属性值的情况，我们可以猜想的结果是：
+
+* **一个有单位值，一个没有单位值的情况**：有单位值的必定是 `flex-basis`，而无单位值的则会是 `flex-grow` 的结果，并且这两个值的顺序如何并不会影响最终的结果；
+
+  <img src="image/02-10-28.png" style="zoom:50%;" /><img src="image/02-10-29.png" style="zoom:50%;" />
+
+* **两个都为无单位的值**：当两个都为无单位的值时，将会根据数值的出现顺序先后作用于 `flex-grow` 以及 `flex-shrink`，同时将 `flex-basis` 调整为 `0%`；
+  <img src="image/02-10-30.png" style="zoom:50%;" /><img src="image/02-10-31.png" style="zoom:50%;" />
+
+* 其中**一个值为 `auto` 的话**，**另外一个必然是无单位**的属性值，否则将会报错；
+  <img src="image/02-10-32.png" style="zoom:50%;" /><img src="image/02-10-33.png" style="zoom:50%;" /><img src="image/02-10-34.png" style="zoom:50%;" />
 
 
 
+### 三个值的 flex 属性
 
+三个值的情况就简单的，展开后分别就是对应 `flex-grow` 、`flex-shrink` 已经 `flex-basis` 这三个属性，书写的时候，对于 `flex` 属性值的顺序需要注意一下几点：
+
+* `flex-grow` 和 `flex-shrink` 这**两个无单位的属性值必须写在一起**，且先后顺序必定是先 `flex-grow`，再是 `flex-shrink`；
+* `flex-basis` 可以在最后一个也可以在第一个位置，唯独**不能在中间**；
+* 关键词属性值的使用，**仅只有 `auto` 可以用**，且不能在两个无单位的属性值中间，以及**不能与有单位的属性值同时出现**；
+
+
+
+### 归纳一下
+
+`flex` 属性是平时大家使用率较高的一个属性，往往都只是写了 `flex: 1;`，那么对于单个属性值的情况，我们需要注意有单位值和无单位值的一个区别。接着呢，就是需要注意一下三个属性值的时候，每个值不同所带来的影响，比如：
+
+* `flex: 1 0 100%`;
+* `flex: 0 0 100%;`
+* `flex: 1 1 50%;`
+* ……
+
+诸如此类的组合方式最终在一个 flex 布局中所带来的作用和影响会是怎么样的。有兴趣的可以阅读一下我的这篇 2017-12-06 写的公众号文章：《[又一次想说 flex 布局挖坑给你，信吗？](https://mp.weixin.qq.com/s/OsVzMZtJeWpz-8gcQI_ySQ)》

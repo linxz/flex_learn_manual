@@ -7,10 +7,6 @@
   /* 在这里给 flex 容器设置了高度 */
   border: 1px solid #000;
 }
-/* 仅为了观察 flex 属性值的变化，隐藏部分不需要的元素 */
-.item:nth-child(n+9) {
-  display: none;
-}
 .item_1 {
   flex: 3 200px;
 }
@@ -26,16 +22,23 @@
 .item_5 {
   flex: 5 auto;
 }
-/* 以下情况会被浏览器视为无效属性值 */
 .item_6 {
+  flex: auto 6;
+}
+/* 以下情况会被浏览器视为无效属性值 */
+.item_7 {
+  /* 如其中一个为 auto，另外一个必定是无单位的值，否则将会报错 */
+  flex: 200px auto;
+}
+.item_8 {
   /* 当含有 initial 的时候，也不可以其他属性值存在 */
   flex: initial 200px;
 }
-.item_7 {
+.item_9 {
   /* 当含有 none 的时候，也不可以其他属性值存在 */
   flex: 7 none;
 }
-.item_8 {
+.item_0 {
   /* 当出现有两个具有单位值的属性值时 */
   flex: 200px 0%;
 }

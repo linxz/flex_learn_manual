@@ -189,6 +189,6 @@ flex 容器内的 flex 元素行之间距离保持相等，第一行与最后一
 
 * `align-content` 的对齐方式主要是以“交叉抽”为基准，在 flex 容器中对齐排列 flex 元素。每个属性值都会有不同的效果，并且还会受到 flex 容器的大小影响每行 flex 元素的展示方式。
 * 同时需要注意的是，`align-content` 对于使用了 `flex-wrap: nowrap;` 的 flex 布局是无效的。
-* 如果在一个 flex 容器仅有一个 flex 元素的话，可以结合 `align-cotent` 和 `justify-content` 实现一个水平垂直居中的效果。
 * `align-content` 是相对于“交叉轴”的，而 `justify-content` 是相对于“主轴”的。
+* `align-content` 是**排列** flex 元素而 `align-items` 是控制 flex 元素的**位置**，想象一下 `align-content: space-around;` 和 `align-items: baseline;`，不要被 `flex-start` 这几个相同的属性值而误导；
 

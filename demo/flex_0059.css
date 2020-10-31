@@ -1,0 +1,19 @@
+/*
+  file: flex_0059.css
+  一行一列的 flex 元素布局情况 4
+*/
+.demo {
+  height: 100px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+/* 既然只有一个元素，那么其他元素就先消失吧 */
+.item:nth-child(n+2) {
+  display: none;
+}
+/* 下面开始是对一个元素的定义 */
+.item_1 {
+  flex: 0 50%;
+  /* 鉴于 item 有 padding，因此改变 box-sizing 的计算方式为 border-box */
+  box-sizing: border-box;
+}

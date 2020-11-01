@@ -1,0 +1,21 @@
+/*
+  file: flex_0064.css
+  一行两列的 flex 元素布局情况 4
+*/
+.demo {
+  height: 100px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+/* 既然只有两个元素，那么其他元素就先消失吧 */
+.item:nth-child(n+3) {
+  display: none;
+}
+/* 下面开始是对两个元素的定义 */
+.item_1 {
+  flex: 40%;
+  order: 1;
+}
+.item_2 {
+  flex: 60%;
+}

@@ -1,0 +1,39 @@
+/*
+  file: flex_0068.css
+  九宫格效果图 4，让格子变方
+*/
+.demo {
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+/* 既然是九宫格，那就去掉最后一个 flex 元素吧 */
+.item_0 {
+  display: none;
+}
+/* 九宫格样式开始 */
+.demo {
+  /* 在 flex 容器超过一行的 flex 元素换行显示 */
+  flex-wrap: wrap;
+}
+.item {
+  /* 让每个 item 元素的宽度初始为 33.33%，其实也就是想让一行三列“均分”一下 */
+  flex: 33.33%;
+  /* 由于 item 自身有 padding，为了便于计算所以采用 border-box 的盒模型计算方式 */
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  position: relative;
+  /* 这个只是为了去掉目前元素的那些数字 */
+  font-size: 0;
+}
+.item::after {
+  /* 不考虑增加额外元素而使用了 ::after，故而通过 block 块级处理 */
+  display: block;
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  /* 宽度等于父元素的宽度 */
+  width: 100%;
+  /* 以父元素的宽度为标准，通过 padding 方式撑开自身的高度 */
+  padding-top: 100%;
+}

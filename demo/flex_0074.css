@@ -1,0 +1,15 @@
+/*
+  file: flex_0074.css
+  当 item_9 的左右 margin 都为 auto 时的效果
+*/
+.demo {
+  border-bottom: 1px solid #000;
+}
+.item {
+  flex: 0 50px;
+  text-align: center;
+}
+.item_9 {
+  margin-left: auto;
+  margin-right: auto;
+}

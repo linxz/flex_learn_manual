@@ -1,0 +1,14 @@
+/*
+  file: flex_0072.css
+  稍微有点变化的导航条样式
+*/
+.demo {
+  border-bottom: 1px solid #000;
+}
+.item {
+  flex: 0 50px;
+  text-align: center;
+}
+.item_9 {
+  margin-left: auto;
+}

@@ -1,0 +1,14 @@
+/*
+  file: flex_0073.css
+  使用百分比产生间距的方式
+*/
+.demo {
+  border-bottom: 1px solid #000;
+}
+.item {
+  flex: 0 50px;
+  text-align: center;
+}
+.item_9 {
+  margin-left: 20%;
+}

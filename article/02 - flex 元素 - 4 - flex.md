@@ -1,3 +1,5 @@
+# 📕 flex 元素：flex
+
 在 flex 元素中使用频率较高的应该是 `flex` 这个属性了，该属性是一个简写属性，包含了 `flex-grow`、`flex-shrink` 以及 `flex-basis` 这三个属性。由于这三个属性的属性值自身特点，所以，`flex` 属性的单位值可以为：
 
 * 无单位、纯数字，且必须大于等于 **0**，主要作用于 `flex-grow` 和 `flex-shrink`；

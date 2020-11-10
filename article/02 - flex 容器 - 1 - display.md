@@ -1,3 +1,5 @@
+# 📕 flex 容器：display
+
 ## 初见 display: flex;
 
 其实大家对于 `display` 属性并不陌生，并且也都是一直在使用，比如 `display: block;` 等，但这里我们所要说的是在 flex 弹性布局中所用到的：

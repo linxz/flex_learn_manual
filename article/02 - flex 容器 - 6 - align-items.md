@@ -48,7 +48,7 @@
 
 <img src="image/02-06-01.png" style="zoom:50%;" />
 
-需要注意的一点是：`stretch` 是拉伸的，所以，看到每个元素的高度都是拉伸开的，并且这是默认值的情况。按照目前的情况，我们的 `flex-direction` 采用的是默认值 `row`，那么如果我们使用 `column` 会是怎么样的呢？只用 **demo_0022** 这个增加 `flex-direction: column;` 的话，会得到这样的一个情况，并没有没拉伸。
+需要注意的一点是：`stretch` 是拉伸的，所以，看到每个元素的高度都是拉伸开的，并且这是默认值的情况。按照目前的情况，我们的 `flex-direction` 采用的是默认值 `row`，那么如果我们使用 `column` 会是怎么样的呢？只用 **demo_0022** 这个增加 `flex-direction: column;` 的话，会得到这样的一个情况，并没有被拉伸。
 
 <img src="image/02-06-03.png" style="zoom:50%;" />
 

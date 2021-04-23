@@ -1,0 +1,25 @@
+/*
+  file: flex_0081.css
+  使用 gap 属性让 flex item 元素产生间距，使用百分比作为单位
+  增加 height 看一下 gap 效果；
+  改变 flex-direction 后看看 gap 的效果；
+*/
+.demo {
+  border: 1px solid #000;
+}
+
+.demo {
+  /* 在 flex 容器超过一行的 flex 元素换行显示 */
+  flex-wrap: wrap;
+  padding: 10px;
+  /* 这里将原来的 10px 改为 10% */
+  gap: 10%;
+  /* 这里增加一个 height，看看 row-gap 效果是否改变 */
+  height: 200px;
+  /* 新增一个 flex-direction 的值看效果 */
+  flex-direction: column;
+}
+
+.item {
+  flex: 1 20%;
+}

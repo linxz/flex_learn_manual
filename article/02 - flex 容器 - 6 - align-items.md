@@ -345,3 +345,4 @@
 * `stretch` 拉伸的效果与 flex 容器和 flex 元素的 size 有关；
 * `flex-start` 、`flex-end` 以及 `center` 是最基本的三个方向的对齐方式；
 * `baseline` 将会受到 flex 元素中字体以及字体大小的关系，从而影响对齐效果；
+

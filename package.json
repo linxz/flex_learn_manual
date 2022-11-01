@@ -4,11 +4,11 @@
   "repository": "git@github.com:linxz/flex_learn_manual.git",
   "author": "linxz <linxz@vip.qq.com>",
   "license": "MIT",
-  "devDependencies": {
-    "vuepress": "^2.0.0-beta.53"
-  },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.53"
   }
 }

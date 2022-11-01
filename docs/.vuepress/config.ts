@@ -2,10 +2,6 @@ import { defaultTheme, defineUserConfig } from 'vuepress';
 import { navbar } from './config/navbar';
 import { sidebar } from './config/sidebar';
 
-import { getDirname, path } from '@vuepress/utils'
-const __dirname = getDirname(import.meta.url)
-
-
 export default defineUserConfig({
   base: '/flex_learn_manual/',
   lang: 'zh-CN',

@@ -13,6 +13,7 @@ export default defineUserConfig({
     editLinkText: '在 Github 上编辑该文档',
     repo: 'linxz/flex_learn_manual',
     docsBranch: 'master',
+    docsDir: 'docs',
     lastUpdatedText: '上次更新',
     contributorsText: '贡献者',
   }),

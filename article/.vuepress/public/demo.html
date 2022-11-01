@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>一个关于 flex 布局的 demo 示例</title>
+  <link rel="stylesheet" href="flex_demo_default.css" />
+  <!-- 不同的 demo 将会以序号形式引入 -->
+  <link rel="stylesheet" href="demo/flex_0001.css" id="getStyle" />
+</head>
+
+<body>
+  <div class="opt">
+    <select id="selectDemo">
+      <option value="0001">0001</option>
+    </select> 
+    <a href="javascript: history.back(-1);">返回上一页</a>
+    <p>demo 示例的外层边框右下角的倒三角箭头可拖动，部分 demo 需要改变外层容器大小才可以看到效果。</p>
+  </div>
+  <div class="box">
+    <!-- 以下 .demo 部分为后续代码示例主要内容，其他将会忽略 -->
+    <div class="demo">
+      <div class="item item_1">1</div>
+      <div class="item item_2">2</div>
+      <div class="item item_3">3</div>
+      <div class="item item_4">4</div>
+      <div class="item item_5">5</div>
+      <div class="item item_6">6</div>
+      <div class="item item_7">7</div>
+      <div class="item item_8">8</div>
+      <div class="item item_9">9</div>
+      <div class="item item_0">0</div>
+    </div>
+  </div>
+  <!-- 以上 .demo 部分为后续代码示例主要内容，其他将会忽略 -->
+  <script>
+    let getStyle = document.getElementById('getStyle'),
+      selectDemo = document.getElementById('selectDemo');
+    const demoTotal = 81;
+    window.onload = function () {
+      let optionsArray = [];
+      let getCSSId = window.location.search.match(/id\=(\d+)/)[1] || '1';
+        console.log(getCSSId)
+      for (let i = 1; i <= demoTotal; i++) {
+        optionsArray += `<option value="00${i<10 ? '0'+i : i}">00${i<10 ? '0'+i : i}</option>`;
+      }
+      selectDemo.innerHTML = optionsArray;
+      if (getCSSId === '' || getCSSId === undefined) {
+        getStyle.setAttribute('href', `demo/flex_${selectDemo.value}.css`);
+      } else {
+        let getCSSIdNumber = Number(getCSSId);
+        if (getCSSIdNumber > 0 && getCSSIdNumber <= demoTotal) {
+          getStyle.setAttribute('href', `demo/flex_00${getCSSIdNumber<10 ? '0' + getCSSIdNumber : getCSSIdNumber}.css`);
+          selectDemo.value = `00${getCSSIdNumber<10 ? '0' + getCSSIdNumber : getCSSIdNumber}`;
+        } else {
+          console.error('🚨超出了目前的 demo 数量情况，现在 demo 的总数为：', demoTotal, '个。')
+        }
+      }
+    }
+    selectDemo.onchange = function () {
+      getStyle.setAttribute('href', `demo/flex_${this.value}.css`);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,2 +1,5 @@
 article/pdf.md
 .DS_Store
+node_modules
+.cache
+.temp

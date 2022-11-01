@@ -16,7 +16,7 @@
 }
 ```
 
-这是一个很[简单的例子](/demo.html?id=13)，当我们使用 `flex-flow: wrap-reverse;` 时，其实是定义了两个属性，分别是：
+这是一个很[简单的例子](../../demo.html?id=13)，当我们使用 `flex-flow: wrap-reverse;` 时，其实是定义了两个属性，分别是：
 
 * `flex-wrap: wrap-reverse;`
 * `flex-direction: row;`

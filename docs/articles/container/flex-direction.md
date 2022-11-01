@@ -13,7 +13,7 @@
 
 ## row 与 row-reverse
 
-`row` 顾名思义，就是“行”。一行两行的行，那也就代表着当使用 `flex-direction: row;` 的时候，flex 元素的将一行排列方式展示。因为 `row` 是 `flex-direction` 的默认值，所以，在前面我们所看的 [demo](/demo.html?id=5) 的初始效果就是了。
+`row` 顾名思义，就是“行”。一行两行的行，那也就代表着当使用 `flex-direction: row;` 的时候，flex 元素的将一行排列方式展示。因为 `row` 是 `flex-direction` 的默认值，所以，在前面我们所看的 [demo](../../demo.html?id=5) 的初始效果就是了。
 
 <img src="/image/02-02-1.png" alt="row" style="zoom:50%;" />
 
@@ -31,7 +31,7 @@
 
 <img src="/image/02-02-2.png" style="zoom:50%;" />
 
-所以当我们选择使用 `row-reverse` 方向的行时，[得到的结果](/demo.html?id=6)就是：
+所以当我们选择使用 `row-reverse` 方向的行时，[得到的结果](../../demo.html?id=6)就是：
 
 <img src="/image/02-02-3.png" style="zoom:50%;" />
 
@@ -51,7 +51,7 @@
 
 `row` 与 `row-reverse` 对于“主轴”而言，其实就是行，也就是说，当使用的是 **row** 时，X 坐标的轴线就是“主轴”，相对的，“交叉轴”一直都是以 Y 坐标的形式存在着。而 **reverse** 的出现则是影响了“起始线”与“终止线”的位置，如果仅仅只是 `row` 的话，“起始线”的位置就是当前语言环境下的阅读顺序，反之，使用了 `row-reverse` 就会得到相反的结果。
 
-这里提到当前语言环境下的阅读顺序，一般我们的阅读浏览顺序是从左往右，从上到下。假如我们[人为修改这个顺序方向](/demo.html?id=7)，那么对于“起始线”和“终止线”是否会有影响呢？
+这里提到当前语言环境下的阅读顺序，一般我们的阅读浏览顺序是从左往右，从上到下。假如我们[人为修改这个顺序方向](../../demo.html?id=7)，那么对于“起始线”和“终止线”是否会有影响呢？
 
 ```css
 /* 
@@ -82,11 +82,11 @@
 }
 ```
 
-从[页面](/demo.html?id=8)截图来看，现在 flex 元素是从上至下的排列，一个 flex 元素占据一行。从这里我们也就可以发现，“主轴”发生了变化，而且“起始线”与“终止线”也变了。
+从[页面](../../demo.html?id=8)截图来看，现在 flex 元素是从上至下的排列，一个 flex 元素占据一行。从这里我们也就可以发现，“主轴”发生了变化，而且“起始线”与“终止线”也变了。
 
 <img src="/image/02-02-6.png" style="zoom:50%;" />
 
-同理，当我们使用 `flex-direction: column-reverse;` 时，得到的 flex [布局结果](/demo.html?id=9)就是反了个方向的。
+同理，当我们使用 `flex-direction: column-reverse;` 时，得到的 flex [布局结果](../../demo.html?id=9)就是反了个方向的。
 
 <img src="/image/02-02-7.png" style="zoom:40%;" />
 
@@ -106,7 +106,7 @@
 
 <img src="/image/02-02-8.png" style="zoom:50%;" />
 
-当 `flex-direction` 的值是 `column` 或者 `column-reverse` 时，`direction` 属性就不再会影响 flex 元素的排列了，而只是让改变了 flex 元素中[文字的显示方向](/demo.html?id=10)。
+当 `flex-direction` 的值是 `column` 或者 `column-reverse` 时，`direction` 属性就不再会影响 flex 元素的排列了，而只是让改变了 flex 元素中[文字的显示方向](../../demo.html?id=10)。
 
 <img src="/image/02-02-9.png" style="zoom:40%;" />
 

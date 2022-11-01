@@ -20,7 +20,7 @@
 }
 ```
 
-简单的增加一个 `justify-content: center;` 之后，[得到的效果](/demo.html?id=14)是从“主轴”的中间开始向两边扩散。
+简单的增加一个 `justify-content: center;` 之后，[得到的效果](../../demo.html?id=14)是从“主轴”的中间开始向两边扩散。
 
 <img src="/image/02-05-2.png" style="zoom:50%;" />
 
@@ -46,7 +46,7 @@
 
 <img src="/image/02-05-3.png" style="zoom:33%;" />
 
-为了能更好地感受一下这个[根据“主轴”而居中对齐的效果](/demo.html?id=15)，我们可以通过开发者工具（DevTools）直接删除 HTML 节点来看看效果。
+为了能更好地感受一下这个[根据“主轴”而居中对齐的效果](../../demo.html?id=15)，我们可以通过开发者工具（DevTools）直接删除 HTML 节点来看看效果。
 
 <img src="/image/02-05-4.gif" style="zoom:50%;" />
 
@@ -76,7 +76,7 @@
 }
 ```
 
-说再多不如直接来 [demo](/demo.html?id=16) 看效果。在这个 demo 中，关键的就是 `justify-content: flex-start;`，其他的属性都是辅助，在代码中已经添加了简单的介绍。具体的效果很直观。
+说再多不如直接来 [demo](../../demo.html?id=16) 看效果。在这个 demo 中，关键的就是 `justify-content: flex-start;`，其他的属性都是辅助，在代码中已经添加了简单的介绍。具体的效果很直观。
 
 <img src="/image/02-05-5.png" style="zoom:50%;" />
 
@@ -136,7 +136,7 @@
 }
 ```
 
-很显然，这个时候我们肯定是知道[第 6 个元素的宽度变大](/demo.html?id=17)了，如果第 8 个元素放不下的话，就会到下一行。那么对齐方式是不是会保持元素之间的间隔相同呢？
+很显然，这个时候我们肯定是知道[第 6 个元素的宽度变大](../../demo.html?id=17)了，如果第 8 个元素放不下的话，就会到下一行。那么对齐方式是不是会保持元素之间的间隔相同呢？
 
 <img src="/image/02-05-10.png" style="zoom:50%;" />
 
@@ -151,7 +151,7 @@
 * 在每行上均匀分配每个 flex 元素，相邻元素的间距也是相同的；
 * 每一行的第一个元素与行首之间的距离是 flex 元素之间距离的一半，每一行最后一个元素与行尾的距离也是 flex 元素之间距离的一半；
 
-从这里的描述来看，`space-around` 与 `space-between` 是极为相似的效果，区别仅在行首以及行尾与 flex 元素的间距。按照属性值的描述，修改 **[flex_0017](/demo.html?id=17)** 这个 demo 的 `justify-content` 属性值，我们可以看到效果是这样的：
+从这里的描述来看，`space-around` 与 `space-between` 是极为相似的效果，区别仅在行首以及行尾与 flex 元素的间距。按照属性值的描述，修改 **[flex_0017](../../demo.html?id=17)** 这个 demo 的 `justify-content` 属性值，我们可以看到效果是这样的：
 
 <img src="/image/02-05-12.png" style="zoom:50%;" />
 
@@ -165,7 +165,7 @@
   /* 相对 flex_0017 demo，仅仅只是修改了 justify-content 的属性值  */
 ```
 
-从[效果](/demo.html?id=18)截图来看，行首与行尾与 flex 元素之间的间距的确是 flex 元素相互之间的间距一半。
+从[效果](../../demo.html?id=18)截图来看，行首与行尾与 flex 元素之间的间距的确是 flex 元素相互之间的间距一半。
 
 <img src="/image/02-05-13.png" style="zoom:50%;" />
 
@@ -188,7 +188,7 @@
   /* 相对 flex_0018 demo，仅仅只是修改了 justify-content 的属性值  */
 ```
 
-同样是只是修改了属性值，[页面效果](/demo.html?id=19)为：
+同样是只是修改了属性值，[页面效果](../../demo.html?id=19)为：
 
 <img src="/image/02-05-14.png" style="zoom:50%;" />
 
@@ -218,7 +218,7 @@
 
 <img src="/image/02-05-15.png" style="zoom:30%;" />
 
-很显然，“主轴”现在是在 Y 坐标上，所以，我们看到的[布局效果](/demo.html?id=20)是从上往下一行一个 flex 元素的排列。以至于 `justify-content` 没有任何效果。那么是真的没有任何效果吗？
+很显然，“主轴”现在是在 Y 坐标上，所以，我们看到的[布局效果](../../demo.html?id=20)是从上往下一行一个 flex 元素的排列。以至于 `justify-content` 没有任何效果。那么是真的没有任何效果吗？
 
 其实并不是的，效果肯定是有的，或许是我们忘了在这个布局的效果中，目前的 flex 元素在 flex 容器是否有足够的空间可以容纳得下呢？flex 容器的高度会被 flex 元素撑开，页面的高度会被 flex 容器撑开，最终我们看到的结果永远都是一行一个。
 
@@ -236,11 +236,11 @@
 
 <img src="/image/02-05-16.png" style="zoom:50%;" />
 
-[现在我们可以看到](/demo.html?id=21) `justify-content: space-evenly;` 在 `flex-direction: column;` 时的效果是上下均分 flex 元素之间的间距。
+[现在我们可以看到](../../demo.html?id=21) `justify-content: space-evenly;` 在 `flex-direction: column;` 时的效果是上下均分 flex 元素之间的间距。
 
 仅仅这样就结束了吗？
 
-还是先看看目前这个 [demo](/demo.html?id=21) 中完整的 CSS 代码，再结合页面效果，可能会有额外的收获。
+还是先看看目前这个 [demo](../../demo.html?id=21) 中完整的 CSS 代码，再结合页面效果，可能会有额外的收获。
 
 ```css
 /* 

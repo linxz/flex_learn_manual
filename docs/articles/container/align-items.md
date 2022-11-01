@@ -1,6 +1,6 @@
 # 📕 flex 容器：align-items
 
-在前面有关 `justify-content` 的时候，我们提到了给 flex 容器设置一个高度，让以 `column` 方向排列的元素在特定高度内出现“换行”的现象。那么我们再往这个 [demo](/demo.html?id=22) 之前看看，如果我们是以 `row` 方向排列的话，并且设置了一个高度，flex 元素在容器中会是怎么样的一个表现形式呢？
+在前面有关 `justify-content` 的时候，我们提到了给 flex 容器设置一个高度，让以 `column` 方向排列的元素在特定高度内出现“换行”的现象。那么我们再往这个 [demo](../../demo.html?id=22) 之前看看，如果我们是以 `row` 方向排列的话，并且设置了一个高度，flex 元素在容器中会是怎么样的一个表现形式呢？
 
 ```css
 /*
@@ -52,7 +52,7 @@
 
 <img src="/image/02-06-03.png" style="zoom:50%;" />
 
-通过 devTools 我们可以看到 flex 元素的宽度其实是 `padding` 和 `width`  的总和，`80px`。所以，我们还是需要把每个 flex 元素的 `width` 删掉才能得到[最终想要的效果](/demo.html?id=23)。
+通过 devTools 我们可以看到 flex 元素的宽度其实是 `padding` 和 `width`  的总和，`80px`。所以，我们还是需要把每个 flex 元素的 `width` 删掉才能得到[最终想要的效果](../../demo.html?id=23)。
 
 ```css
 /*
@@ -99,7 +99,7 @@
 
 <img src="/image/02-06-05.png" style="zoom:50%;" />
 
-按照前面的 [demo](/demo.html?id=24) 情况，这里我们可以考虑给每个 flex 元素增加宽度，以形成区别。
+按照前面的 [demo](../../demo.html?id=24) 情况，这里我们可以考虑给每个 flex 元素增加宽度，以形成区别。
 
 ```css
 /*
@@ -123,7 +123,7 @@
 
 <img src="/image/02-06-06.png" style="zoom:50%;" />
 
-好像除了[第六个 flex 元素的宽度变了](/demo.html?id=25)，其他的感觉上并没有太大的变化。这个主要是因为 flex 是弹性布局，我们在没有具体控制每个 flex 元素的弹性特性时，现在所看到的宽度也并非是真实的宽度。而且，在 flex 弹性布局中，如果 `flex-direction` 是默认值 `row` 的话，是会一行排列下去的，因此，我们就需要考虑增加一个 `flex-wrap` 属性来让其换行展示。
+好像除了[第六个 flex 元素的宽度变了](../../demo.html?id=25)，其他的感觉上并没有太大的变化。这个主要是因为 flex 是弹性布局，我们在没有具体控制每个 flex 元素的弹性特性时，现在所看到的宽度也并非是真实的宽度。而且，在 flex 弹性布局中，如果 `flex-direction` 是默认值 `row` 的话，是会一行排列下去的，因此，我们就需要考虑增加一个 `flex-wrap` 属性来让其换行展示。
 
 ```css
 /*
@@ -138,7 +138,7 @@
 
 <img src="/image/02-06-07.png" style="zoom:50%;" />
 
-[现在这样](/demo.html?id=26)，如果一行放不下，就换行展示，最终的 flex 元素的宽度也是正确的了。这里需要注意，目前 flex 容器是有 `height` 值，浏览器会根据具体的高度值，将 flex 元素等分排列。
+[现在这样](../../demo.html?id=26)，如果一行放不下，就换行展示，最终的 flex 元素的宽度也是正确的了。这里需要注意，目前 flex 容器是有 `height` 值，浏览器会根据具体的高度值，将 flex 元素等分排列。
 
 #### flex 容器大于 flex 元素的高度总和时
 
@@ -175,7 +175,7 @@
 }
 ```
 
-这里暂时先把 `width` 部分注释，我们看一下 `align-items: flex-end;` 的[页面效果](/demo.html?id=27)。
+这里暂时先把 `width` 部分注释，我们看一下 `align-items: flex-end;` 的[页面效果](../../demo.html?id=27)。
 
 <img src="/image/02-06-09.png" style="zoom:50%;" />
 
@@ -214,7 +214,7 @@
 }
 ```
 
-按照 `flex-end` 的表现来看，那么这个时候我们能够[看到的效果](/demo.html?id=28)，应该是 6 和 7 会相对于 5 的顶部来对齐，并且整体的 flex 元素是从 flex 容器顶部开始排列下来的。
+按照 `flex-end` 的表现来看，那么这个时候我们能够[看到的效果](../../demo.html?id=28)，应该是 6 和 7 会相对于 5 的顶部来对齐，并且整体的 flex 元素是从 flex 容器顶部开始排列下来的。
 
 <img src="/image/02-06-12.png" style="zoom:50%;" />
 
@@ -233,7 +233,7 @@
 ......
 ```
 
-当 `align-items` 的值为 `center`，我们可以[看到 flex 元素的排列方式](/demo.html?id=29)就是以居中的方式对齐了。
+当 `align-items` 的值为 `center`，我们可以[看到 flex 元素的排列方式](../../demo.html?id=29)就是以居中的方式对齐了。
 
 <img src="/image/02-06-13.png" style="zoom:50%;" />
 
@@ -255,9 +255,9 @@
 
 <img src="/image/02-06-14.png" style="zoom:50%;" />
 
-对于已经掌握了 `align-items` 对齐方式的你，[这个也就没有任何难度可言](/demo.html?id=30)，理解起来应该就是那么的简单，那么的容易了。这个时候不知道你是否会想起上个章节中我们学过的 `justify-content` 属性呢？如果这个时候我们再来一个 `justify-content: center;` 之后会是怎么样呢？不妨试试？
+对于已经掌握了 `align-items` 对齐方式的你，[这个也就没有任何难度可言](../../demo.html?id=30)，理解起来应该就是那么的简单，那么的容易了。这个时候不知道你是否会想起上个章节中我们学过的 `justify-content` 属性呢？如果这个时候我们再来一个 `justify-content: center;` 之后会是怎么样呢？不妨试试？
 
-前面我们提到，**上中下**、**左中右** ，对于 `align-items: center;` 对齐的结果都是中间，[如下调整了之后](/demo.html?id=31)，flex 元素排列方式改变，但还是在中间。
+前面我们提到，**上中下**、**左中右** ，对于 `align-items: center;` 对齐的结果都是中间，[如下调整了之后](../../demo.html?id=31)，flex 元素排列方式改变，但还是在中间。
 
 ```css
 /*
@@ -309,11 +309,11 @@
 }
 ```
 
-在这个 [demo](/demo.html?id=32) 中，保持之前的一些属性，修改 `.demo` 中的 `align-items` 属性值为 `baseline`，那么我们可以看到目前的页面效果与 `flex-start` 没什么差别，对吧。
+在这个 [demo](../../demo.html?id=32) 中，保持之前的一些属性，修改 `.demo` 中的 `align-items` 属性值为 `baseline`，那么我们可以看到目前的页面效果与 `flex-start` 没什么差别，对吧。
 
 <img src="/image/02-06-16.png" style="zoom:50%;" />
 
-或许这也就是 CSS 的魅力所在，看似相同的效果，但往往隐藏着在特定情况下才会被触发的情况。比如我们现在对 `.item_6` [做一些调整](/demo.html?id=33)。
+或许这也就是 CSS 的魅力所在，看似相同的效果，但往往隐藏着在特定情况下才会被触发的情况。比如我们现在对 `.item_6` [做一些调整](../../demo.html?id=33)。
 
 ```css
 .item_6 {
@@ -326,7 +326,7 @@
 
 <img src="/image/02-06-17.png" style="zoom:50%;" />
 
-[可以看到](/demo.html?id=33) `.item_6` 这个元素旁边的的 flex 元素对齐时，无论 `.item_6` 中的字体大小如何变化，对齐的位置是不会改变的。我们来粗浅地了解一下这个所谓的“基线”。
+[可以看到](../../demo.html?id=33) `.item_6` 这个元素旁边的的 flex 元素对齐时，无论 `.item_6` 中的字体大小如何变化，对齐的位置是不会改变的。我们来粗浅地了解一下这个所谓的“基线”。
 
 <img src="/image/02-06-18.png" style="zoom:50%;" />
 

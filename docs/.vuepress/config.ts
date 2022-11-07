@@ -1,6 +1,7 @@
 import { defaultTheme, defineUserConfig } from 'vuepress';
 import { navbar } from './config/navbar';
 import { sidebar } from './config/sidebar';
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 
 export default defineUserConfig({
   base: '/flex_learn_manual/',
@@ -17,4 +18,9 @@ export default defineUserConfig({
     lastUpdatedText: '上次更新',
     contributorsText: '贡献者',
   }),
+  plugins: [
+    googleAnalyticsPlugin({
+      id: 'G-EDF8HPLN39'
+    }),
+  ]
 });

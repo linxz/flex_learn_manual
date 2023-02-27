@@ -1522,6 +1522,11 @@ vue@^3.2.41:
     "@vue/server-renderer" "3.2.41"
     "@vue/shared" "3.2.41"
 
+vuepress-plugin-google-adsense@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmmirror.com/vuepress-plugin-google-adsense/-/vuepress-plugin-google-adsense-0.2.1.tgz#04bd7e421542992d193bf15951dc882bcd561e0f"
+  integrity sha512-6t6jLEPf1NISBsHxIzCYe4SfXlkk5I9MRR94GfV1HTMEyblYXEEGAra60FOWvoq2leB4rshdasabUp56PzunwA==
+
 vuepress-vite@2.0.0-beta.53:
   version "2.0.0-beta.53"
   resolved "https://registry.npmmirror.com/vuepress-vite/-/vuepress-vite-2.0.0-beta.53.tgz#6724d5edd99df2d494a8145206192e4cc88e9b9a"

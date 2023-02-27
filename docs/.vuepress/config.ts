@@ -18,6 +18,16 @@ export default defineUserConfig({
     lastUpdatedText: '上次更新',
     contributorsText: '贡献者',
   }),
+  head: [
+    [
+      "script",
+      {
+        "data-ad-client": "ca-pub-7671595215522684",
+        async: true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+      },
+    ],
+  ],
   plugins: [
     googleAnalyticsPlugin({
       id: 'G-EDF8HPLN39'

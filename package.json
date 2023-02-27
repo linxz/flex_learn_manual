@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "2.0.0-beta.53",
-    "vuepress": "2.0.0-beta.53"
+    "vuepress": "2.0.0-beta.53",
+    "vuepress-plugin-google-adsense": "^0.2.1"
   }
 }

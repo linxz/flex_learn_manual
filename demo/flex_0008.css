@@ -1,0 +1,7 @@
+/* 
+  file: flex_0008.css
+  flex-direction: column; 时的页面布局效果。
+*/
+.demo {
+  flex-direction: column;
+}

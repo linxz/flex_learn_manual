@@ -1,0 +1,18 @@
+/*
+  file: flex_0057.css
+  一行一列的 flex 元素布局情况 2
+*/
+.demo {
+  height: 100px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+/* 既然只有一个元素，那么其他元素就先消失吧 */
+.item:nth-child(n+2) {
+  display: none;
+}
+/* 下面开始是对一个元素的定义 */
+.demo {
+  justify-content: center;
+  align-items: center;
+}

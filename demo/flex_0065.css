@@ -1,0 +1,22 @@
+/*
+  file: flex_0065.css
+  九宫格效果图  1
+*/
+.demo {
+  border: 1px solid #000;
+}
+/* 既然是九宫格，那就去掉最后一个 flex 元素吧 */
+.item_0 {
+  display: none;
+}
+/* 九宫格样式开始 */
+.demo {
+  /* 在 flex 容器超过一行的 flex 元素换行显示 */
+  flex-wrap: wrap;
+}
+.item {
+  /* 让每个 item 元素的宽度初始为 33.33%，其实也就是想让一行三列“均分”一下 */
+  flex: 33.33%;
+  /* 由于 item 自身有 padding，为了便于计算所以采用 border-box 的盒模型计算方式 */
+  box-sizing: border-box;
+}

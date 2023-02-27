@@ -1,0 +1,17 @@
+/* 
+  file: flex_0025.css
+  在 flex 元素增加宽度之后的 align-items: flex-start; 对齐展示效果；
+*/
+.demo {
+  align-items: flex-start;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}

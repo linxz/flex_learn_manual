@@ -1,0 +1,12 @@
+/* 
+  file: flex_0013.css
+  flex-flow: wrap-reverse; 等效于 flex-wrap: wrap-reverse;；
+*/
+.demo {
+  flex-flow: wrap-reverse;
+  /* 
+    其实这时准确的应该是这两个属性：
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+  */
+}

@@ -1,0 +1,18 @@
+/*
+  file: flex_0078.css
+  使用 gap 属性让 flex item 元素产生间距
+*/
+.demo {
+  border: 1px solid #000;
+}
+
+.demo {
+  /* 在 flex 容器超过一行的 flex 元素换行显示 */
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+.item {
+  flex: 1 20%;
+}

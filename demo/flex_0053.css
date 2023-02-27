@@ -1,0 +1,37 @@
+/*
+  file: flex_0053.css
+  align-self 最后小结中的一个思考题
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+.item:nth-child(n+7) {
+  display: none;
+}
+.item_1 {
+  align-self: flex-end;
+}
+.item_2 {
+  align-self: center;
+}
+.item_3 {
+  align-self: flex-start;
+}
+.item_4 {
+  align-self: stretch;
+}
+.item_5 {
+  align-self: baseline;
+  font-size: 30px;
+}
+.item_6 {
+  align-self: baseline;
+  color: #fff;
+}

@@ -1,0 +1,11 @@
+/* 
+  file: flex_0042.css
+  当给 flex 元素设置 flex-grow: 1; 后的情况；
+*/
+.demo {
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  flex-grow: 1;
+}

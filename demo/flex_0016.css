@@ -1,0 +1,15 @@
+/* 
+  file: flex_0016.css
+  justify-content: flex-start; 的对齐效果
+*/
+.demo {
+  justify-content: flex-start;
+  /* 让 flex 元素换行，观察元素多行情况下的对齐 */
+  flex-wrap: wrap;
+  /* 为了便于更好地看清 flex 元素的改变，加个边框来增强效果 */
+  border: 1px solid #000;
+}
+/* 让每个元素都有一个宽度，加强对齐效果视觉差 */
+.item {
+  width: 60px;
+}

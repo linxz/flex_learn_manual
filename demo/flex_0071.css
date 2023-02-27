@@ -1,0 +1,11 @@
+/*
+  file: flex_0071.css
+  常规导航条的样式
+*/
+.demo {
+  border-bottom: 1px solid #000;
+}
+.item {
+  flex: 0 50px;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+/*
+  file: flex_0075.css
+  上中下三行布局效果
+*/
+html,
+body {
+  /* 设置 html 和 body 的高度为 100%，并将 margin 重置为 0 */
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+.demo {
+  /* demo 作为 body 的子元素，高度为 100% 时，将会撑满整个窗口 */
+  height: 100%;
+  /* 将 item 的排列方向改为列的形式 */
+  flex-direction: column;
+  border: 1px solid #000;
+}
+.item:nth-child(n+4) {
+  /* 从第 4 个元素开始隐藏，目前不需要 */
+  display: none;
+}

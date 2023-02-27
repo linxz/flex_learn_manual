@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-62d67314","path":"/articles/example/05.html","title":"📕 实例：上下固定中间可滚","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1667306420000,"contributors":[{"name":"linxz","email":"linxz@vip.qq.com","commits":1}]},"filePathRelative":"articles/example/05.md"}');export{e as data};

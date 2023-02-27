@@ -1,0 +1,24 @@
+/* 
+  file: flex_0047.css
+  box-sizing 的值对 flex-basis 的影响。
+*/
+.demo {
+  flex-wrap: wrap;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+/* 从第三个 item 开始隐藏，暂时不需要 */
+.item:nth-child(n+3) {
+  display: none;
+}
+.item {
+  flex-shrink: 0; /* 不可收缩 */
+  flex-basis: 200px; /* 基于不可收缩，flex 元素初始大小 */
+  padding: 0 50px; /* 增加左右内间距，结合 box-sizing 对比效果 */
+}
+.item_1 {
+  box-sizing: content-box;
+}
+.item_2 {
+  box-sizing: border-box;
+}

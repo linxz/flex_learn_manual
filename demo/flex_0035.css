@@ -1,0 +1,18 @@
+/* 
+  file: flex_0035.css
+  align-content: flex-end; 的效果
+*/
+.demo {
+  flex-wrap: wrap;
+  align-content: flex-end;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}

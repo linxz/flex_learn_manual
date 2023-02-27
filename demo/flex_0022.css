@@ -1,0 +1,18 @@
+/* 
+  file: flex_0022.css
+  当 flex-direction 为默认的 row 时，flex 容器高度较大的页面效果；
+*/
+.demo {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 400px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+}
+/* 让第 6 个 flex 元素的宽度 变大，看看布局效果的变化。 */
+.item_6 {
+  width: 200px;
+}

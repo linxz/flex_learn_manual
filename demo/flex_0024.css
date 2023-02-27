@@ -1,0 +1,10 @@
+/* 
+  file: flex_0024.css
+  align-items: flex-start; 在默认情况下的页面表现效果；
+*/
+.demo {
+  align-items: flex-start;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}

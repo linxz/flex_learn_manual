@@ -1,0 +1,9 @@
+/* 
+  file: flex_0014.css
+  justify-content: center; 在 flex-direction 的默认值情况下的表现效果
+*/
+.demo {
+  justify-content: center;
+  /* 为了便于更好地看清 flex 元素的改变，加个边框来增强效果 */
+  border: 1px solid #000;
+}

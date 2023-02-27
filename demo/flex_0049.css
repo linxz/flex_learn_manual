@@ -1,0 +1,44 @@
+/* 
+  file: flex_0049.css
+  flex 有两个属性值时的情况，主要是为了观察在 DevTools 中解析 flex 后每个值的变化；
+*/
+.demo {
+  flex-wrap: wrap;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item_1 {
+  flex: 3 200px;
+}
+.item_2 {
+  flex: 200px 2;
+}
+.item_3 {
+  flex: 0 4;
+}
+.item_4 {
+  flex: 4 6;
+}
+.item_5 {
+  flex: 5 auto;
+}
+.item_6 {
+  flex: auto 6;
+}
+/* 以下情况会被浏览器视为无效属性值 */
+.item_7 {
+  /* 如其中一个为 auto，另外一个必定是无单位的值，否则将会报错 */
+  flex: 200px auto;
+}
+.item_8 {
+  /* 当含有 initial 的时候，也不可以其他属性值存在 */
+  flex: initial 200px;
+}
+.item_9 {
+  /* 当含有 none 的时候，也不可以其他属性值存在 */
+  flex: 7 none;
+}
+.item_0 {
+  /* 当出现有两个具有单位值的属性值时 */
+  flex: 200px 0%;
+}

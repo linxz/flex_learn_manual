@@ -1,0 +1,39 @@
+/*
+  file: flex_0054.css
+  order 的效果演示
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item_1 {
+  order: 6;
+}
+.item_2 {
+  order: 5;
+}
+.item_3 {
+  order: 114;
+}
+.item_4 {
+  order: 3;
+  width: 100px;
+}
+.item_5 {
+  order: 2;
+}
+.item_6 {
+  order: 1;
+}
+.item_9 {
+  order: 0;
+  width: 40px;
+}
+.item_0 {
+  order: -1;
+  width: 60px;
+  color: #fff;
+}

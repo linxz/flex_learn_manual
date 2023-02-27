@@ -1,0 +1,7 @@
+/* 
+  file: flex_0012.css
+  flex-wrap: wrap-reverse; 的页面效果；
+*/
+.demo {
+  flex-wrap: wrap-reverse;
+}

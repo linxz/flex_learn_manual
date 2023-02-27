@@ -1,0 +1,14 @@
+/* 
+  file: flex_0044.css
+  控制 flex-grow 时可拉伸元素的宽度
+*/
+.demo {
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  flex-grow: 1;
+}
+.item_5 {
+  max-width: 100px;
+}

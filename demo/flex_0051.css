@@ -1,0 +1,29 @@
+/*
+  file: flex_0051.css
+  align-self: baseline; 时，不同文字大小的效果；
+*/
+.demo {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+  /* 在这里给 flex 容器设置了高度 */
+  border: 1px solid #000;
+}
+.item {
+  width: 60px;
+  /* 将所有的 item 元素对齐方式设置为 baseline */
+  align-self: baseline;
+}
+/* 设置不同的 font-size 来观察元素的对齐变化 */
+.item_1 {
+  font-size: 30px;
+}
+.item_2 {
+  font-size: 60px;
+}
+.item_4 {
+  font-size: 20px;
+}
+.item_5 {
+  font-size: 10px;
+}

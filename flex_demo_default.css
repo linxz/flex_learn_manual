@@ -1,0 +1,51 @@
+/* 这是 flex 布局相关 demo 的默认样式 flex_demo_default.css */
+/* 缩小容器的宽度，并设定可改变尺寸，用于观察布局变化 */
+.box {
+	width: 390px;
+	overflow: auto;
+	padding: 16px;
+	resize: both;
+	border: 1px solid #000;
+}
+.opt {
+	margin-bottom: 12px;
+}
+/* 默认的这部分样式不会改变，新增的功能将以新的 CSS 文件形式引入到 HTML 页面中。 */
+.demo {
+	display: flex;
+}
+.item {
+	padding: 10px;
+}
+.item_1 {
+  background-color: red;
+}
+.item_2 {
+	background-color: orange;
+}
+.item_3 {
+	background-color: yellow;
+}
+.item_4 {
+	background-color: green;
+}
+.item_5 {
+	background-color: cyan;
+}
+.item_6 {
+	background-color: blue;
+}
+.item_7 {
+	background-color: purple;
+}
+.item_8 {
+	background-color: grey;
+}
+/* 在做 flex_0017 demo 的时候，实在是受不了白色和黑色的背景，稍微调整一下颜色值。 */
+/* 文章就不再做相关说明了。 */
+.item_9 {
+	background-color: #e7e7e7;
+}
+.item_0 {
+	background-color: #292929;
+}
